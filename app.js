@@ -1,4 +1,4 @@
-
+//=============== COMPONENT DETAIL ====================
 Vue.component('CoinDetail',{
   props: ['coin'],
   data (){
@@ -6,6 +6,7 @@ Vue.component('CoinDetail',{
       showPrices: false,
       value: 0  }
   },
+  //=============== METHODS ====================
   methods:{
     toggleShowPrices (){
       this.showPrices = !this.showPrices
@@ -19,6 +20,7 @@ Vue.component('CoinDetail',{
       return this.value / this.coin.price
     }
   },
+  //=================LifeCycles ==============
   created (){
     console.log('Created CoinDetail...')
   },
@@ -26,6 +28,7 @@ Vue.component('CoinDetail',{
   mounted (){
     console.log('Mounted CoinDetail...')
   },
+//==================Templates =============
 
   template:`
   <div>
@@ -86,12 +89,15 @@ new Vue ({
     }
   },
 
-
+//=============== METHODS ====================
   methods:{
     updateColor (color){
       this.color = color || this.color.split('').reverse().join('')
     }
   },
+
+  
+  //=================LifeCycles ==============
   created (){
     console.log('Created ...')
   },
